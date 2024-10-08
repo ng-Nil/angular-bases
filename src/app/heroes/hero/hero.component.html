@@ -1,0 +1,44 @@
+<h1> {{ name }} </h1> 
+
+<!-- dl definition list
+td table description
+dd description -->
+
+<dl> definition list
+
+    <td>Nombre:</td>
+    <dd> {{ name }} </dd>
+
+    <td>Edad:</td>
+    <dd> {{ age }} </dd>
+
+    <td>Método:</td>
+    <dd> {{ getHeroDescription() }} </dd>
+
+    <td>Capitalizado:</td>
+    <dd> {{ capitalizedName }} </dd>
+
+</dl>
+
+<!-- si marcamos el if como false;null;0;undefined, 
+ el botono no existe, no ocupa lugar -->
+
+<button 
+*ngIf = " name !== 'Spiderman' "
+class="btn btn-primary mx-2"
+(click)="changeHero()">
+    Cambiar nombre
+</button>
+
+<button 
+*ngIf = " age === 45 "
+class="btn btn-primary"
+(click)="changeAge()">
+    Cambiar edad
+</button>
+
+<button 
+class="btn btn-primary mx-2"
+(click)="resetForm()">
+    reset
+</button>
